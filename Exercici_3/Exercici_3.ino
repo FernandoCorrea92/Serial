@@ -12,13 +12,16 @@
 
  //******  Setup  *********************************************************
  void setup () {
-  Serial.begin(9600);               // abre el puerto serie a 9600 bps
-  Serial.println("HELLO WORLD!");   // imprimeix les dades com a text
+  Serial.begin(9600);
+
 
  }
 
 
  //******  Loop  **********************************************************
  void loop () {
-  
+  Serial.println("Hello world!");  /* imprimeix hello world un a sota de
+                                    l'altre per el ln.*/
+                         
+  delay(1000);
  }

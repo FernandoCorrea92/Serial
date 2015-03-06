@@ -8,14 +8,13 @@
 
 
  //******  Variables  *****************************************************
- int Valor;
-
-
-
+ int hores;
+ int euros;
+  
  //******  Setup  *********************************************************
  void setup () {
   Serial.begin(9600);
-  Serial.print("Entra un numero, ");
+  Serial.println("Quantes hores de treball?");
 
  }
 
@@ -24,22 +23,18 @@
  void loop () {
     while (Serial.available() > 0) {
      
-     Valor = Serial.parseInt();
-  
-   Serial.print("el ");
-   Serial.print(Valor);
- 
-      if (Valor % 2 == 0)
-    {
-      Serial.println(" es parell.");
-    } 
-    else
-     {
-       Serial.println(" es senar.");
+   hores = Serial.parseInt();
+   euros = hores * 20;
+   
+   Serial.print("el salari per ");
+   Serial.print(hores);
+   Serial.print(" hores treballades es de ");
+   Serial.print(euros);
+   Serial.println(" Euros.");
+   
     
-     }
-     Serial.read() == '\n';
+   if (Serial.read() == '\n');
      Serial.println();
-     Serial.print("Entra un numero, ");
+     Serial.println("Entra un numero. ");
    }
   }

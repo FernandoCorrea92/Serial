@@ -8,14 +8,14 @@
 
 
  //******  Variables  *****************************************************
- int Valor;
-
-
-
+ int valor;
+ int i;
+ int resultat;
+  
  //******  Setup  *********************************************************
  void setup () {
   Serial.begin(9600);
-  Serial.print("Entra un numero, ");
+  Serial.println("Entra un numero.");
 
  }
 
@@ -24,22 +24,26 @@
  void loop () {
     while (Serial.available() > 0) {
      
-     Valor = Serial.parseInt();
-  
-   Serial.print("el ");
-   Serial.print(Valor);
- 
-      if (Valor % 2 == 0)
-    {
-      Serial.println(" es parell.");
-    } 
-    else
-     {
-       Serial.println(" es senar.");
-    
-     }
-     Serial.read() == '\n';
+   valor = Serial.parseInt();
+   
+   Serial.print("el numero ");
+   Serial.print(valor);
+   Serial.print(" te ");
+   
+   resultat = valor;
+   i = 0;
+   
+    while (resultat != 0) {
+     resultat = valor / 10;
+     valor = valor / 10;
+     i++;
+   }
+   
+   Serial.print(i);
+   Serial.println(" xifres.");
+   
+     if (Serial.read() == '\n');
      Serial.println();
-     Serial.print("Entra un numero, ");
+     Serial.println("Entra un numero. ");
    }
   }

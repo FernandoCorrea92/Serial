@@ -8,7 +8,7 @@
 
 
  //******  Variables  *****************************************************
- int tempAigua = 100;
+ int tempAigua = 101;
 
  //******  Setup  *********************************************************
  void setup () {
@@ -18,17 +18,17 @@
   {
     Serial.println("Aigua encara no bull.");
   } 
- if ( tempAigua >= 90 && tempAigua <100)
+ else if ( tempAigua >= 90 && tempAigua <100)
   {
    Serial.println("Aigua a punt de bullir.");
   }
   
-  if ( tempAigua == 100)
+ else if ( tempAigua == 100)
   {
     Serial.println("Aigua a 100C.");
   }
  
-  if (tempAigua > 100)
+  else if (tempAigua > 100)
   {
     Serial.println("Aigua bullint!");
   }

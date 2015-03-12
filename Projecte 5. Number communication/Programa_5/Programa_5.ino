@@ -8,14 +8,13 @@
 
 
  //******  Variables  *****************************************************
- int hores;
- int euros;
- float salari;
+ int cm;
+
  
  //******  Setup  *********************************************************
  void setup () {
   Serial.begin(9600);
-  Serial.println("Quantes hores de treball?");
+  Serial.println("Quina mida te el cargol en cm?");
 
  }
 
@@ -24,30 +23,35 @@
  void loop () {
     while (Serial.available() > 0) {
      
-   hores = Serial.parseInt();
-   if (hores <= 37) {
-    euros = hores * 20;
-   }
-    else if ( hores > 37 ){
-     euros = (hores - 37) * 30 + 37 * 20;
-   }
-   
-   if (euros <= 800) {
-     salari = euros - euros * 0.05;
-   }
-   else {
-    salari = euros - euros * 0.10;
-   }
-   
-   Serial.print("el salari per ");
-   Serial.print(hores);
-   Serial.print(" hores treballades es de ");
-   Serial.print(salari);
-   Serial.println(" Euros.");
-   
+   cm = Serial.parseInt();
+    Serial.print("El cargol amb una mida de ");
+    Serial.print(cm);
+    Serial.print(" cm es ");
+ 
     
-   if (Serial.read() == '\n');
-     Serial.println();
-     Serial.println("Entra un numero. ");
-   }
+  if (cm >=1 && cm < 3) {
+    Serial.println(" petit.");
   }
+  
+  else if (cm > 2 && cm < 5) {
+   Serial.println(" mitja.");
+  }
+ 
+  else if (cm > 4 && cm < 8) {
+   Serial.println(" gran.");
+ }
+  
+  else if (cm > 7 && cm <= 10){
+  Serial.println(" molt gran.");
+ }
+  
+  else {
+  Serial.println("incorrecte.");
+  }
+ 
+   if (Serial.read() == '\n'); 
+     Serial.println();
+     Serial.println("Quina mida te el cargol en cm?");
+   }
+ }
+  

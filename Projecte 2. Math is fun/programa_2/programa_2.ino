@@ -1,6 +1,6 @@
  /*************************************************************************
  **                                                                      **
- **    Descripició del programa                                          **
+ **    Càlcul de la hipotenusa                                           **
  **                                                                      **
  *************************************************************************/
 
@@ -8,24 +8,24 @@
 
 
  //******  Variables  *****************************************************
-  int a = 3;
-  int b = 4;
-  int h;
+  int a = 3;   // Definir variable "a" donant-l'hi un valor
+  int b = 4;  // Definir variable "b" donant-l'hi un valor
+  int h;     // Definir variable "h"
  
 
  //******  Setup  *********************************************************
  void setup () {
-   Serial.begin(9600);
-   Serial.println("Lets calculate a hypoteneuse");
-   Serial.print("a = ");
-   Serial.println(a);
-   Serial.print("b = ");
-   Serial.println(b);
+   Serial.begin(9600);                               // Obre el port sèrie a 9600 bps
+   Serial.println("Lets calculate a hypoteneuse");  // Imprimeix per pantalla les dades
+   Serial.print("a = ");                           // Imprimeix per pantalla les dades en una nova línia
+   Serial.println(a);                             // Mostar valor de la variable "a" definit
+   Serial.print("b = ");                         // Imprimeix per pantalla les dades en una nova línia
+   Serial.println(b);                           // Mostar valor de la variable "b" definit
    
-   h = sqrt(a*a + b*b);
+   h = sqrt(a*a + b*b);                       // Càlcul de la hipotenusa (sqrt = arrel quadrada)
  
- Serial.print("h = ");
- Serial.println(h);
+ Serial.print("h = ");                      // Imprimeix per pantalla les dades en una nova línia
+ Serial.println(h);                        // Mostar valor de la hipotenusa calculada
    
   }
 

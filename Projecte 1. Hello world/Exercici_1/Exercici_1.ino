@@ -1,6 +1,6 @@
  /*************************************************************************
  **                                                                      **
- **    Descripició del programa                                          **
+ **    Mostrar text per pantalla                                         **
  **                                                                      **
  *************************************************************************/
 
@@ -12,7 +12,7 @@
 
  //******  Setup  *********************************************************
  void setup () {
-  Serial.begin(9600);               // abre el puerto serie a 9600 bps
+  Serial.begin(9600);               // Obre el port sèrie a 9600 bps
   Serial.println("HELLO WORLD!");   // imprimeix les dades com a text
 
  }

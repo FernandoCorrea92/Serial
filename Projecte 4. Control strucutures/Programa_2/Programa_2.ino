@@ -1,6 +1,6 @@
  /*************************************************************************
  **                                                                      **
- **    Descripició del programa                                          **
+ **    Mostrar un missateg o un altre depenent del valor de la variable  **
  **                                                                      **
  *************************************************************************/
 
@@ -8,20 +8,20 @@
 
 
  //******  Variables  *****************************************************
- int tempAigua = 100;
+ int tempAigua = 100; //definir la variable "tempAigua" a 100
 
  //******  Setup  *********************************************************
  void setup () {
- Serial.begin(9600);     // set up Serial library at 9600 bps
+ Serial.begin(9600);     // Obre el port sèrie a 9600 bps
 
-  if ( tempAigua >= 100)
+  if ( tempAigua >= 100) // Condició de que quan tempAigua sigui major o igual de 100
   {
-    Serial.print("Aigua supera els 100C, esta bullint!");
+    Serial.print("Aigua supera els 100C, esta bullint!");  // Imprimeix per pantalla les dades
   } 
- else
+ else                  // Condició contrari (sinó)
  
   {
-   Serial.print("Aigua encara no bull.");
+   Serial.print("Aigua encara no bull.");  // Imprimeix per pantalla les dades
   }
  }
 

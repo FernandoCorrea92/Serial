@@ -8,8 +8,8 @@
 
 
  //******  Variables  *****************************************************
- int drive_gb = 5;
- int drive_mb;
+ int drive_gb = 5; //definir "drive_gb" com a dada int amb un valor fixe de 5
+ int drive_mb;     //definir "driev_mb" com a dada int sense valor
  
 
  //******  Setup  *********************************************************

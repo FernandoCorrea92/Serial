@@ -1,6 +1,6 @@
  /*************************************************************************
  **                                                                      **
- **    Descripició del programa                                          **
+ **   de gb a mb                                                         **
  **                                                                      **
  *************************************************************************/
 
@@ -8,25 +8,25 @@
 
 
  //******  Variables  *****************************************************
- int drive_gb = 100;
- long drive_mb;
+ int drive_gb = 100;  //definir la variable drive_gb" amb un valor de 100
+ long drive_mb;      //definir la variable "drive_mb"
  
 
  //******  Setup  *********************************************************
  void setup () {
-  Serial.begin(9600);     
-  Serial.print("Your HD is ");
-  Serial.print(drive_gb);
-  Serial.println(" GB large.");
+  Serial.begin(9600);           // Obre el port sèrie a 9600 bps
+  Serial.print("Your HD is ");  // Imprimeix per pantalla les dades
+  Serial.print(drive_gb);        // Mostar valor de la variable "drive_gb" definit
+  Serial.println(" GB large.");  // Imprimeix per pantalla les dades
   
   drive_mb = 1024 * drive_gb; //està multiplicant un int i un long per tant
                               // el resultat seguirà sent amb int i no dona
                               // correcte.
   
 
-  Serial.print("It can store ");
-  Serial.print(drive_mb);
-  Serial.println(" Megabytes!");
+  Serial.print("It can store "); // Imprimeix per pantalla les dades
+  Serial.print(drive_mb);        // Mostar el resultat del càlcul
+  Serial.println(" Megabytes!"); // Imprimeix per pantalla les dades
   }
 
 
